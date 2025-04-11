@@ -15,7 +15,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      const newSocket = io("https://vercel.com/jivit87s-projects/whispr-chatting-website", {
+      const newSocket = io("https://whispr-backend.onrender.com", {
         query: { userId: user._id },
       });
 
