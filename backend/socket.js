@@ -6,9 +6,10 @@ const User = require("./models/User");
 const socketSetup = (server) => {
   const io = socketio(server, {
     cors: {
-      origin: "https://whispr-chatting-website.onrender.com",
+      origin: ["https://whispr-chatting-website.onrender.com", "http://localhost:5173"],
       methods: ["GET", "POST"],
-    },
+      credentials: true
+    }
   });
 
   // Store online users
