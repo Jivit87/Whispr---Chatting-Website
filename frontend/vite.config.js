@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: 'https://whispr-backend.onrender.com',
+        target: 'https://vercel.com/jivit87s-projects/whispr-chatting-website',
         changeOrigin: true,
       }
     }
