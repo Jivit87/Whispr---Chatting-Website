@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50;
+}
+
+.message-bubble {
+  @apply p-3 rounded-lg max-w-xs md:max-w-md lg:max-w-lg;
+}
+
+.my-message {
+  @apply bg-primary text-white ml-auto;
+}
+
+.other-message {
+  @apply bg-gray-200 text-gray-800 mr-auto;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
