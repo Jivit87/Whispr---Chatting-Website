@@ -6,7 +6,7 @@ const User = require("./models/User");
 const socketSetup = (server) => {
   const io = socketio(server, {
     cors: {
-      origin: "https://whispr-frontend-n1ox.onrender.com",
+      origin: "https://whispr-chatting-website.onrender.com",
       methods: ["GET", "POST"],
     },
   });
