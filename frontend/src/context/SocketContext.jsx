@@ -15,7 +15,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      const newSocket = io("http://localhost:5002", {
+      const newSocket = io("https://whispr-backend.onrender.com", {
         query: { userId: user._id },
       });
 
