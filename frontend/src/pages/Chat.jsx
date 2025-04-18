@@ -18,12 +18,10 @@ const Chat = () => {
   const fileInputRef = useRef(null);
 
   useEffect(() => {
-    // Scroll to bottom on new messages
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   useEffect(() => {
-    // Request notification permission
     const requestPermission = async () => {
       const permission = await requestNotificationPermission();
       if (permission === "granted") {
@@ -47,7 +45,6 @@ const Chat = () => {
     const file = e.target.files[0];
     if (file) {
       if (file.size > 5 * 1024 * 1024) {
-        // 5mb limit
         return toast.error("Image size should be less than 5MB");
       }
 
@@ -65,7 +62,7 @@ const Chat = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      {/* Header */}
+
       <div className="bg-slate-800 p-4 text-white flex justify-between items-center shadow-md">
         <div className="flex items-center">
           <div className="inline-flex items-center justify-center w-8 h-8 bg-white rounded-full mr-3">
@@ -93,9 +90,9 @@ const Chat = () => {
         </div>
       </div>
 
-      {/* Chat Container */}
+      // Chat container
       <div className="flex flex-1 overflow-hidden">
-        {/* Online users sidebar */}
+        // online side bar
         {showOnlineUsers && (
           <div className="w-64 bg-white border-r border-gray-200 shadow-md overflow-y-auto transition-all duration-300 ease-in-out">
             <div className="p-4 border-b border-gray-100">
@@ -120,9 +117,9 @@ const Chat = () => {
           </div>
         )}
 
-        {/* Message area */}
+        // messaging area
         <div className="flex-1 flex flex-col relative">
-          {/* Messages */}
+          
           <div className="flex-1 p-4 overflow-y-auto scrollbar-hide">
             {messages.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full space-y-4">
@@ -182,7 +179,7 @@ const Chat = () => {
             )}
           </div>
 
-          {/* Image Preview */}
+          //Image Preview
           {image && (
             <div className="px-4 py-2 bg-gray-50 border-t border-gray-100">
               <div className="relative inline-block">
@@ -201,14 +198,14 @@ const Chat = () => {
             </div>
           )}
 
-          {/* Emoji Picker */}
+          //Emoji picker 
           {showEmojiPicker && (
             <div className="absolute bottom-20 right-4 shadow-lg rounded-lg z-10">
               <EmojiPicker onEmojiClick={handleEmojiClick} />
             </div>
           )}
 
-          {/* Message Input */}
+    
           <form onSubmit={handleSubmit} className="bg-white border-t border-gray-100 p-4 flex items-center space-x-3 relative">
             <button 
               type="button" 
