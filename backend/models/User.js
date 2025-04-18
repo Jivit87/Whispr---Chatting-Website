@@ -1,4 +1,4 @@
-// FILE: chat-app/backend/models/User.js
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
