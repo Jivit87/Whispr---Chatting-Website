@@ -92,7 +92,7 @@ const Chat = () => {
 
       
       <div className="flex flex-1 overflow-hidden">
-        // online side bar
+     
         {showOnlineUsers && (
           <div className="w-64 bg-white border-r border-gray-200 shadow-md overflow-y-auto transition-all duration-300 ease-in-out">
             <div className="p-4 border-b border-gray-100">
