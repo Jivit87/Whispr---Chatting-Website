@@ -90,7 +90,7 @@ const Chat = () => {
         </div>
       </div>
 
-      // Chat container
+      
       <div className="flex flex-1 overflow-hidden">
         // online side bar
         {showOnlineUsers && (
@@ -117,7 +117,7 @@ const Chat = () => {
           </div>
         )}
 
-        // messaging area
+        
         <div className="flex-1 flex flex-col relative">
           
           <div className="flex-1 p-4 overflow-y-auto scrollbar-hide">
@@ -179,7 +179,7 @@ const Chat = () => {
             )}
           </div>
 
-          //Image Preview
+          
           {image && (
             <div className="px-4 py-2 bg-gray-50 border-t border-gray-100">
               <div className="relative inline-block">
@@ -198,7 +198,7 @@ const Chat = () => {
             </div>
           )}
 
-          //Emoji picker 
+     
           {showEmojiPicker && (
             <div className="absolute bottom-20 right-4 shadow-lg rounded-lg z-10">
               <EmojiPicker onEmojiClick={handleEmojiClick} />
