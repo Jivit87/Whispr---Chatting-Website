@@ -1,4 +1,4 @@
-// FILE: chat-app/backend/routes/auth.js
+
 const express = require('express');
 const { register, login, getMe } = require('../controllers/auth');
 const { protect } = require('../middleware/auth');
